@@ -1,9 +1,9 @@
 
--------- React native instagram clone ----------->
+-------- React native instagram clone -------------------->
  
     - This project is under development
 
-------------------- Project starter ------------->
+------------------- Project starter ---------------------->
  
      - npx react-native init Instagram  => To initalize a new project
      - npm start --reset-cache => Resetting the cache: 
@@ -11,7 +11,7 @@
      - cd IOS pod install => if having a problem while creating the project
      - npx pod-install ios => Anytime we install a new dependency in the IOS folder
 
-------------------- Project starter ------------->
+------------------- Project starter ----------------------->
 
     - Project Structure
        - src
@@ -38,3 +38,13 @@
        apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
      - Don't forget to install the types
 
+-------------- Start building components ---------------->
+
+    ---- Post components -------------------------------->
+
+    - Codes
+
+
+    - Design
+      - aspectRatio: 1 => allow us to display the image as square
+      - flexDirection: 'row', 'r'ow-reverse', 'column', 'column-reverse'
