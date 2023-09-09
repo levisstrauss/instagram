@@ -6,28 +6,39 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import styles from "./styles";
+import Comment from "../Comment";
+import { IPost } from "../../types/models";
 
 
-const FeedPost = () => {
+
+interface IFeedPost {
+  post: IPost;
+}
+const FeedPost = ({ post }: IFeedPost) => {
+
+  //const {post} = props;
+
   return (
     <View style={styles.post}>
+
       {/* Header */}
+
       <View style={styles.header}>
         <Image
           source={{
-            uri: 'https://3.bp.blogspot.com/-_bEuWkDoh4M/WlnaJ5rrFsI/AAAAAAAAAJU/s2cWMTglbp0OEpI7cdpvDQsAf3IzOG1agCLcBGAs/s1600/batman.jpg',
+            uri: post.user.image,
           }}
           style={styles.userAvatar}
         />
-        <Text style={styles.userName}>vadimnotjustdev</Text>
+        <Text style={styles.userName}>{post.user.username}</Text>
         <Entypo name="dots-three-horizontal" size={16} style={styles.threeDots}/>
       </View>
 
-
       {/* Content */}
+
       <Image
         source={{
-          uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg',
+          uri: post.image,
         }}
         style={styles.image}
       />
@@ -65,33 +76,24 @@ const FeedPost = () => {
         <Text style={styles.text}>
           Liked by {' '}
           <Text style={styles.bold}>lgrinevicius</Text> and{' '}
-          <Text style={styles.bold}>66 others</Text>
+          <Text style={styles.bold}>{post.nofLikes} others</Text>
         </Text>
 
         {/* Post Description */}
         <Text style={styles.text}>
-          <Text style={styles.bold}>vadimnotjustdev</Text>{' '}
-          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
-          and typesetting industry.
+          <Text style={styles.bold}>{post.user.username}</Text>{' '}
+          {post.description}
         </Text>
 
         {/* Comments */}
-        <Text>View all 16 comments</Text>
-        <View style={styles.comment}>
-          <Text style={styles.commentText}>
-            <Text style={styles.bold}>vadimnotjustdev</Text>{' '}
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
-          </Text>
-          <AntDesign
-            name={'hearto'}
-            size={14}
-            style={styles.icon}
-            color={colors.black}
-          />
-        </View>
+        <Text>View all {post.nofComments} comments</Text>
+
+        {post.comments.map(comment => (
+          <Comment key={comment.id} comment={comment}/>
+        ))}
 
         {/* Posted date */}
-        <Text>19 december, 2023</Text>
+        <Text>{post.createdAt}</Text>
 
       </View>
     </View>

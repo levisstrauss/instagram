@@ -40,11 +40,11 @@
 
 -------------- Start building components ---------------->
 
-    ---- Post components -------------------------------->
-
-    - Codes
-
+    ---- FeedPost components -------------------------------->
 
     - Design
       - aspectRatio: 1 => allow us to display the image as square
-      - flexDirection: 'row', 'r'ow-reverse', 'column', 'column-reverse'
+      - flexDirection: 'row', 'row-reverse', 'column', 'column-reverse'
+
+    ---- Comment components -------------------------------->
+      
