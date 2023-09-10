@@ -40,11 +40,35 @@
 
 -------------- Start building components ---------------->
 
-    ---- FeedPost components -------------------------------->
-
-    - Design
-      - aspectRatio: 1 => allow us to display the image as square
-      - flexDirection: 'row', 'row-reverse', 'column', 'column-reverse'
-
+    ---- FeedPost components ------------------------------->
     ---- Comment components -------------------------------->
+    ---- Integration of posts dta -------------------------->
+   
+    - Use the map function if you only have few data to render
+    - But instead, use FlatList if you use have a lot of data to render
+
+    - {post.comments.map(comment => (
+          <Comment key={comment.id} comment={comment}/>
+    ))}
+
+    --- FlatList check out the documentation ---->
+       <FlatList
+         data={posts}
+         renderItem={({item}) => <FeedPost post={item} />}
+       />
+
+    ------- Some of the flatlist properties ------->
+    - showsVerticalScrollIndicator: true of false
+    - For the virtualizedList, never put a FlatList inside of a scrollView if both of 
+      them have the same direction
+
+    - Suppose the item to return does not have any key as id in the FlatList, we can hande that 
+      propery property using the keyExtractor property:
+  
+       <FlatList
+         data={posts}
+         renderItem={({item}) => <FeedPost post={item} />}
+         keyExtractor={item = { return `post-${item.createdAt}`;
+       />
+    
       
