@@ -70,5 +70,15 @@
          renderItem={({item}) => <FeedPost post={item} />}
          keyExtractor={item = { return `post-${item.createdAt}`;
        />
+    ------- Working with state -------------------->
+    - The is a very crucial concept in state managment 
+      if we just want to update the value, we can just set it to true
+      if we want to update it, we can set existingValue => !existingValue
+
+    - The importance thing here is that anytime we have to use something
+      more than once, it  better to retract it as it own component.
+    
+
+
     
       

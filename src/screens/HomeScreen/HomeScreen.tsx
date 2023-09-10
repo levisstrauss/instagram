@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, FlatList, View } from "react-native";
+import { FlatList} from "react-native";
 import posts from '../../data/posts.json';
 import FeedPost from "../../components/FeedPost";
 

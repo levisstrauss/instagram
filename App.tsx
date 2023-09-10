@@ -14,7 +14,8 @@ const App = () => {
 const styles = StyleSheet.create({
   app: {
     flex: 1,
-    paddingTop: 15,
+    paddingTop: 40,
+    paddingBottom: 25,
   }
 
 })
