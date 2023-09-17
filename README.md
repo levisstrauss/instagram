@@ -7,7 +7,7 @@
  
      - npx react-native init Instagram  => To initalize a new project
      - npm start --reset-cache => Resetting the cache: 
-     - react-native run-ios or react-native run-ios => run on android or IOS
+     - react-native run-ios or react-native run-android => run on android or IOS
      - cd IOS pod install => if having a problem while creating the project
      - npx pod-install ios => Anytime we install a new dependency in the IOS folder
 
@@ -70,7 +70,7 @@
          renderItem={({item}) => <FeedPost post={item} />}
          keyExtractor={item = { return `post-${item.createdAt}`;
        />
-    ------- Working with state -------------------->
+    ---- Working with state to implement the heart color --------->
     - The is a very crucial concept in state managment 
       if we just want to update the value, we can just set it to true
       if we want to update it, we can set existingValue => !existingValue
@@ -79,6 +79,17 @@
       more than once, it  better to retract it as it own component.
     
 
+    ---- Implementation of the carousel --------->
 
+     const viewabilityConfig: ViewabilityConfig = {
+      itemVisiblePercentThreshold: 51,
+     }
+    
+     const onViewableItemsChanged = useRef(
+        ({viewableItems}: {viewableItems: Array<ViewToken>}) => {
+        if (viewableItems.length > 0) {
+        setActiveImageIndex(viewableItems[0].index || 0);
+        }
+    });
     
       

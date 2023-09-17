@@ -1,21 +1,19 @@
 import React from 'react';
-import { StyleSheet, FlatList, View } from "react-native";
+import { StyleSheet, FlatList, View, SafeAreaView } from "react-native";
 import HomeScreen from "./src/screens/HomeScreen/HomeScreen";
 
 
 const App = () => {
   return (
-    <View style={styles.app}>
+    <SafeAreaView>
        <HomeScreen />
-    </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   app: {
-    flex: 1,
-    paddingTop: 40,
-    paddingBottom: 25,
+
   }
 
 })
