@@ -4,23 +4,37 @@ import { StyleSheet } from "react-native";
 
 
 export default StyleSheet.create({
-  icon: {
-    marginHorizontal:5,
-  },
-  text: {
-    color: colors.black,
-    lineHeight: 18
+  comment: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   bold: {
     fontWeight: fonts.weight.bold
   },
   commentText: {
     color: colors.black,
-    flex: 1 ,
-    lineHeight: 18
+    lineHeight: 18,
+
   },
-  comment: {
+  icon: {
+    marginHorizontal:5,
+  },
+  avatar: {
+    width: 40,
+    aspectRatio: 1,
+    borderRadius: 25,
+    marginRight:5,
+  },
+  middleColumn: {
+    flex: 1,
+  },
+  footer: {
     flexDirection: 'row',
-    alignItems: 'center'
+    marginBottom: 10,
   },
+  footerText: {
+    marginRight: 10,
+  },
+
+
 })
