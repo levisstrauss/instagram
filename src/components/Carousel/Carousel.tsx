@@ -1,4 +1,4 @@
-import { View, Text, FlatList, Image, useWindowDimensions, ViewabilityConfig, ViewToken } from "react-native";
+import { View, FlatList, Image, useWindowDimensions, ViewabilityConfig, ViewToken } from "react-native";
 import React, { useRef, useState } from "react";
 import colors from "../../theme/colors";
 import DoublePressable from "../DoublePressable";

@@ -5,9 +5,11 @@ import FeedPost from "../../components/FeedPost";
 
 
 const HomeScreen = () => {
-  return (
+
+    return (
       <FlatList
         data={posts}
+          // @ts-ignore
         renderItem={({item}) => <FeedPost post={item} />}
         showsVerticalScrollIndicator={false}
       />

@@ -6,7 +6,7 @@ import HomeScreen from "./src/screens/HomeScreen/HomeScreen";
 const App = () => {
   return (
     <SafeAreaView>
-       <HomeScreen />
+       <HomeScreen/>
     </SafeAreaView>
   );
 };

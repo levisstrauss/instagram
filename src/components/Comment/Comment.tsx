@@ -14,9 +14,7 @@ const Comment = ({ comment }: ICommentProps) => {
     <View style={styles.comment}>
       <Text style={styles.commentText}>
         <Text style={styles.bold}>{comment.user.username}</Text>{' '}
-
         {comment.comment}
-
       </Text>
       <AntDesign
         name={'hearto'}
