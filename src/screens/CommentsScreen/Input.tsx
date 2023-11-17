@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     button: {
         position: 'absolute',
         right: 18,
-        bottom: 20,
+        bottom: 22,
         fontSize: fonts.size.s,
         fontWeight: fonts.weight.full,
         color: colors.primary,

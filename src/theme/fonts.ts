@@ -20,5 +20,4 @@ const weight: {[key: string]: TextStyle["fontWeight"]} = {
   thin: '400',
 }
 
-
 export default {size, weight};
